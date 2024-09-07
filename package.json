@@ -1,15 +1,15 @@
 {
   "name": "Qᴜᴇᴇɴ Aʟʏᴀ👸",
   "version": "2",
-  "description": "Qᴜᴇᴇɴ Aʟʏᴀ👸 latest multi device whatsapp bot",
+  "description": "Qᴜᴇᴇɴ Aʟʏᴀ latest multi device whatsapp bot",
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "pm2 start index.js --deep-monitoring --attach --name Qᴜᴇᴇɴ Aʟʏᴀ👸",
-    "stop": "pm2 stop Qᴜᴇᴇɴ Aʟʏᴀ👸",
-    "restart": "pm2 restart Qᴜᴇᴇɴ Aʟʏᴀ👸"
+    "start": "pm2 start index.js --deep-monitoring --attach --name Qᴜᴇᴇɴ Aʟʏᴀ",
+    "stop": "pm2 stop Qᴜᴇᴇɴ Aʟʏᴀ",
+    "restart": "pm2 restart Qᴜᴇᴇɴ Aʟʏᴀ"
   },
-  "keywords": ["Qᴜᴇᴇɴ Aʟʏᴀ👸", "whatsapp-bot", "whatsapp md bot"],
+  "keywords": ["Qᴜᴇᴇɴ Aʟʏᴀ", "whatsapp-bot", "whatsapp md bot"],
   "author": "Kawdhitha",
   "license": "ISC",
   "dependencies": {
