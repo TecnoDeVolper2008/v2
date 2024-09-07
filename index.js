@@ -52,7 +52,7 @@ async function downloadSessionData() {
         console.error('Please add your session to SESSION_ID env !!');
         return false;
     }
-    const sessdata = config.SESSION_ID.split("HANSAMAL-MD=", "")[1];
+    const sessdata = config.SESSION_ID.split("Queen-Alya=", "")[1];
     const url = `https://mega.nz/file/${sessdata}`;
     try {
         const response = await axios.get(url);
@@ -70,20 +70,20 @@ async function start() {
     try {
         const { state, saveCreds } = await useMultiFileAuthState(sessionDir);
         const { version, isLatest } = await fetchLatestBaileysVersion();
-        console.log(`👨‍💻 HANSAMAL-MD using WA v${version.join('.')}, isLatest: ${isLatest}`);
+        console.log(`👨‍💻 Qᴜᴇᴇɴ Aʟʏᴀ👸 using WA v${version.join('.')}, isLatest: ${isLatest}`);
         
         const Matrix = makeWASocket({
             version,
             logger: pino({ level: 'silent' }),
             printQRInTerminal: useQR,
-            browser: ["HANSAMAL-MD", "safari", "3.3"],
+            browser: ["Queen-Alya", "safari", "3.3"],
             auth: state,
             getMessage: async (key) => {
                 if (store) {
                     const msg = await store.loadMessage(key.remoteJid, key.id);
                     return msg.message || undefined;
                 }
-                return { conversation: "HANSAMAL-MD whatsapp user bot" };
+                return { conversation: "Queen_Alya whatsapp user bot" };
             }
         });
 
@@ -96,7 +96,8 @@ async function start() {
             } else if (connection === 'open') {
                 if (initialConnection) {
                     console.log(chalk.green("📍 HANSAMAL-MD CONNECTED Successful️ ✅"));
-                    Matrix.sendMessage(Matrix.user.id, { text: `📍HANSAMAL-MD CONNECTED Successful️ ✅` });
+                    Matrix.sendMessage(Matrix.user.id, { text: `📍Qᴜᴇᴇɴ Aʟʏᴀ👸 CONNECTED Successful️ ✅` });
+                    Matrix.sendMessage(Matrix.user.id, { text: `> Qᴜᴇᴇɴ Aʟʏᴀ👸 ʙʏ ᴋᴀᴡᴅʜɪᴛʜᴀ ɴɪʀᴍᴀʟ` });
                     initialConnection = false;
                 } else {
                     console.log(chalk.blue("♻️ Connection reestablished after restart."));
