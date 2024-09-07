@@ -1,15 +1,15 @@
 {
-  "name": "Qᴜᴇᴇɴ Aʟʏᴀ👸",
+  "name": "Queen-Alya",
   "version": "2",
-  "description": "Qᴜᴇᴇɴ Aʟʏᴀ latest multi device whatsapp bot",
+  "description": "Queen-Alya latest multi device whatsapp bot",
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "pm2 start index.js --deep-monitoring --attach --name HANSAMAL-MD",
-    "stop": "pm2 stop HANSAMAL-MD",
-    "restart": "pm2 restart HANSAMAL-MD"
+    "start": "pm2 start index.js --deep-monitoring --attach --name Queen-Alya",
+    "stop": "pm2 stop Queen-Alya",
+    "restart": "pm2 restart Queen-Alya"
   },
-  "keywords": ["HANSAMAL-MD", "whatsapp-bot", "whatsapp md bot"],
+  "keywords": ["Queen-Alya", "whatsapp-bot", "whatsapp md bot"],
   "author": "Kawdhitha",
   "license": "ISC",
   "dependencies": {
