@@ -1,16 +1,16 @@
 {
-  "name": "HANSAMAL-MD",
-  "version": "10.8.1",
-  "description": "HANSAMAL-MD latest multi device whatsapp bot",
+  "name": "Qᴜᴇᴇɴ Aʟʏᴀ👸",
+  "version": "2",
+  "description": "Qᴜᴇᴇɴ Aʟʏᴀ👸 latest multi device whatsapp bot",
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "pm2 start index.js --deep-monitoring --attach --name HANSAMAL-MD",
-    "stop": "pm2 stop HANSAMAL-MD",
-    "restart": "pm2 restart HANSAMAL-MD"
+    "start": "pm2 start index.js --deep-monitoring --attach --name Qᴜᴇᴇɴ Aʟʏᴀ👸",
+    "stop": "pm2 stop Qᴜᴇᴇɴ Aʟʏᴀ👸",
+    "restart": "pm2 restart Qᴜᴇᴇɴ Aʟʏᴀ👸"
   },
-  "keywords": ["hansamal-md", "whatsapp-bot", "whatsapp md bot"],
-  "author": "IMALKA",
+  "keywords": ["Qᴜᴇᴇɴ Aʟʏᴀ👸", "whatsapp-bot", "whatsapp md bot"],
+  "author": "Kawdhitha",
   "license": "ISC",
   "dependencies": {
     "@ffmpeg-installer/ffmpeg": "^1.1.0",
