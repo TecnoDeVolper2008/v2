@@ -52,7 +52,7 @@ async function downloadSessionData() {
         console.error('Please add your session to SESSION_ID env !!');
         return false;
     }
-    const sessdata = config.SESSION_ID.split("Queen-Alya=", "")[1];
+    const sessdata = config.SESSION_ID.split("Imalka-MD&", "")[1];
     const url = `https://mega.nz/file/${sessdata}`;
     try {
         const response = await axios.get(url);
@@ -95,7 +95,7 @@ async function start() {
                 }
             } else if (connection === 'open') {
                 if (initialConnection) {
-                    console.log(chalk.green("📍 HANSAMAL-MD CONNECTED Successful️ ✅"));
+                    console.log(chalk.green("📍 Qᴜᴇᴇɴ Aʟʏᴀ👸 CONNECTED Successful️ ✅"));
                     Matrix.sendMessage(Matrix.user.id, { text: `📍Qᴜᴇᴇɴ Aʟʏᴀ👸 CONNECTED Successful️ ✅` });
                     Matrix.sendMessage(Matrix.user.id, { text: `> Qᴜᴇᴇɴ Aʟʏᴀ👸 ʙʏ ᴋᴀᴡᴅʜɪᴛʜᴀ ɴɪʀᴍᴀʟ` });
                     initialConnection = false;
