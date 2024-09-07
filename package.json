@@ -5,11 +5,11 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "pm2 start index.js --deep-monitoring --attach --name Qᴜᴇᴇɴ Aʟʏᴀ",
-    "stop": "pm2 stop Qᴜᴇᴇɴ Aʟʏᴀ",
-    "restart": "pm2 restart Qᴜᴇᴇɴ Aʟʏᴀ"
+    "start": "pm2 start index.js --deep-monitoring --attach --name HANSAMAL-MD",
+    "stop": "pm2 stop HANSAMAL-MD",
+    "restart": "pm2 restart HANSAMAL-MD"
   },
-  "keywords": ["Qᴜᴇᴇɴ Aʟʏᴀ", "whatsapp-bot", "whatsapp md bot"],
+  "keywords": ["HANSAMAL-MD", "whatsapp-bot", "whatsapp md bot"],
   "author": "Kawdhitha",
   "license": "ISC",
   "dependencies": {
