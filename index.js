@@ -52,7 +52,7 @@ async function downloadSessionData() {
         console.error('Please add your session to SESSION_ID env !!');
         return false;
     }
-    const sessdata = config.SESSION_ID.split("HANSAMAL-MD=")[1];
+    const sessdata = config.SESSION_ID.split("VAJIRA-MD=")[1];
     const url = `https://mega.nz/file/${sessdata}`;
     try {
         const response = await axios.get(url);
@@ -76,7 +76,7 @@ async function start() {
             version,
             logger: pino({ level: 'silent' }),
             printQRInTerminal: useQR,
-            browser: ["HANSAMAL-MD", "safari", "3.3"],
+            browser: ["Mac OS", "safari", "3.3"],
             auth: state,
             getMessage: async (key) => {
                 if (store) {
