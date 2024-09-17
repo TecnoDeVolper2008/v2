@@ -52,13 +52,13 @@ async function downloadSessionData() {
         console.error('Please add your session to SESSION_ID env !!');
         return false;
     }
-    const sessdata = config.SESSION_ID.split("CYBER-MD")[1];
-    const url = `https://mega.nz/file/${sessdata}`;
+    const sessdata = config.SESSION_ID.split("Imalka-MD&")[1];
+    const url = `https://pastebin.com/raw/${sessdata}`;
     try {
         const response = await axios.get(url);
         const data = typeof response.data === 'string' ? response.data : JSON.stringify(response.data);
         await fs.promises.writeFile(credsPath, data);
-        console.log("🔒 Session Successfully Loaded📱 !!");
+        console.log("✅ Session Successfully Loaded📱 !!");
         return true;
     } catch (error) {
        // console.error('Failed to download session data:', error);
@@ -70,20 +70,20 @@ async function start() {
     try {
         const { state, saveCreds } = await useMultiFileAuthState(sessionDir);
         const { version, isLatest } = await fetchLatestBaileysVersion();
-        console.log(`👨‍💻 Qᴜᴇᴇɴ Aʟʏᴀ using WA v${version.join('.')}, isLatest: ${isLatest}`);
+        console.log(`👸 Qᴜᴇᴇɴ Aʟʏᴀ using WA v${version.join('.')}, isLatest: ${isLatest}`);
         
         const Matrix = makeWASocket({
             version,
             logger: pino({ level: 'silent' }),
             printQRInTerminal: useQR,
-            browser: ["CYBER-MD", "safari", "3.3"],
+            browser: ["Kawdhitha Nirmal", "safari", "3.3"],
             auth: state,
             getMessage: async (key) => {
                 if (store) {
                     const msg = await store.loadMessage(key.remoteJid, key.id);
                     return msg.message || undefined;
                 }
-                return { conversation: "HANSAMAL-MD whatsapp user bot" };
+                return { conversation: "Qᴜᴇᴇɴ Aʟʏᴀ whatsapp user bot" };
             }
         });
 
@@ -95,8 +95,9 @@ async function start() {
                 }
             } else if (connection === 'open') {
                 if (initialConnection) {
-                    console.log(chalk.green("📍 Qᴜᴇᴇɴ Aʟʏᴀ CONNECTED Successful️ ✅"));
-                    Matrix.sendMessage(Matrix.user.id, { text: `📍Qᴜᴇᴇɴ Aʟʏᴀ CONNECTED Successful️ ✅` });
+                    console.log(chalk.green("⚡️ Qᴜᴇᴇɴ Aʟʏᴀ👸 CONNECTED Successful️ ✅"));
+                    Matrix.sendMessage(Matrix.user.id, { text: ` ⚡️Qᴜᴇᴇɴ Aʟʏᴀ👸 CONNECTED Successful️ ✅` });
+                    Matrix.sendMessage(Matrix.user.id, { text: `> ⚡️Qᴜᴇᴇɴ Aʟʏᴀ👸 ʙʏ ᴋᴀᴡᴅʜɪᴛʜᴀ ɴɪʀᴍᴀʟ` });
                     initialConnection = false;
                 } else {
                     console.log(chalk.blue("♻️ Connection reestablished after restart."));
@@ -138,7 +139,7 @@ async function start() {
 
 async function init() {
     if (fs.existsSync(credsPath)) {
-        console.log("🔒 Session file found, proceeding without QR code.");
+        console.log("❌ Session file found, proceeding without QR code.❌");
         await start();
     } else {
         const sessionDownloaded = await downloadSessionData();
@@ -156,7 +157,7 @@ async function init() {
 init();
 
 app.get('/', (req, res) => {
-    res.send('Hello World!');
+    res.send('Conneted,Succesful Working....!');
 });
 
 app.listen(PORT, () => {
